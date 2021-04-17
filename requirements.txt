@@ -1,0 +1,9 @@
+python-docx==0.8.10 # main docx templating and handling
+# docx2pdf # for docx to pdf conversions
+
+Flask==1.1.1 # Web Development Stuff
+PyQRCode==1.2.1 # QRCode Generation
+pypng==0.0.20 # Save QRCode to PNG
+gunicorn==20.0.4 # Deployment to Heroku
+
+cryptography==3.3.1 # For Storing Passwords
