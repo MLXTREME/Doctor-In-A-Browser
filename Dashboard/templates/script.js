@@ -17,6 +17,12 @@ menu.addEventListener('click', (e) => {
     }
 })
 
+/*default-mesage*/
+
+const srry=document.querySelector('.default-message');
+dashEm.addEventListener('click',()=>{
+    srry.classList.remove('default-message');
+})
 
 /* Stage*/
 
@@ -84,7 +90,3 @@ default_button.addEventListener('change', function () {
 })
 
 
-const use=document.querySelector('use');
-use.addEventListener('click',()=>{
-    console.log("Laure");
-})
