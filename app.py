@@ -75,9 +75,10 @@ def loginsuccess():
                  'LoginUserPassword': LoginUserPassword,
                  'LoginUserRememberMe': LoginUserRememberMe}
     print(LoginDict)
-    return render_template('dashboard.html')
+    return render_template('dashboardfinal.html')
     # return 'Hi You are now Logged in!!'
     # return render_template('success.html')
+
 
 
 @app.route('/register', methods=['POST'])
@@ -100,6 +101,20 @@ def registersuccess():
     return render_template('register_success.html')
     # return 'Hi You are now Registered!!'
     # return render_template('success.html')
+
+@app.route('/MaternalHealthDy.html')#,methods=['POST'])
+def maternal():
+    return render_template('/MaternalHealthDy.html')
+
+@app.route('/maternalhealthresult',methods=['POST'])
+def maternalresult():
+    f = request.form['fname']
+    l = request.form['lname']
+    email = request.form['email']
+    mobile = request.form['mobile']
+    filex = request.files['f']
+
+    return f+" "+l+" with contacts "+email+" "+mobile+" uploaded "+ filex.filename
 
 
 if __name__ == "__main__":
