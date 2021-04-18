@@ -101,19 +101,22 @@ button:hover{
 .model-1-tab{
     background-color:white;
     opacity: 0;
+    pointer-events: none;
 }
 .model-2-tab{
     background-color:lightgreen;
     opacity: 0;
-    
+    pointer-events: none;
 }
 .model-3-tab{
     background-color:lightcoral;
     opacity: 0;
+    pointer-events: none;
 }
 .model-4-tab{
     background-color:rgb(6, 177, 177);
     opacity: 0;
+    pointer-events: none;
 }
 .model-1-tab.open{
     opacity: 1;

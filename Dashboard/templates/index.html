@@ -3,7 +3,7 @@
 
 <head>
     <title></title>
-    <!--<link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -54,14 +54,6 @@
                         <div class="image">
                             <img src="" alt="">
                         </div>
-                        <div class="content">
-                            <div class="icon">
-                                <i class="fas fa-cloud-upload-alt"></i>
-                            </div>
-                            <div class="text">
-                                <p>No File choosen!</p>
-                            </div>
-                        </div>
                         <div id="cancel">
                             <i class="fas fa-times"></i>
                         </div>
@@ -70,12 +62,12 @@
                         </div>
 
                     </div>
-                    <form action="/model1res",method="post"> 
-                    <input type="file" name="file" />  
-                    <!--<input id="default-button" type="file" name="file">-->
-                    <!--<button id="choose_file" onclick="defaultBtnActive()">Choose a file</button>-->
-                    <input type = "submit" value="Upload">
-                    </form>
+                   
+                      
+                    <input id="default-button" type="file" hidden>
+                    <button id="choose_file" onclick="defaultBtnActive()">Choose a file</button>
+                    
+                   
 
                 </div>
                 
