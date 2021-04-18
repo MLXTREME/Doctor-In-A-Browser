@@ -69,7 +69,6 @@ def homepage2():
     return render_template('homepage.html')
 
 
-
 @app.route('/login', methods=['POST'])
 def loginsuccess():
     LoginUserEmail = request.form['LoginUserEmail']
@@ -83,11 +82,9 @@ def loginsuccess():
     LoginDict = {'LoginUserEmail': LoginUserEmail,
                  'LoginUserPassword': LoginUserPassword,
                  'LoginUserRememberMe': LoginUserRememberMe}
-    write_log(Text=LoginDict, Header=LOGIN_HEADER)
-    # print(LoginUserEmail, LoginUserPassword, LoginUserRememberMe)
-    # Return whether login was successfull or not & redirect succesfully to dashboard in 3 secs.
-    # Loading Circle ++
-    return 'Hi You are now Logged in!!'
+    print(LoginDict)
+    return render_template('dashboard.html')
+    # return 'Hi You are now Logged in!!'
     # return render_template('success.html')
 
 
@@ -107,13 +104,11 @@ def registersuccess():
                     'RegisterUserEmail': RegisterUserEmail,
                     'RegisterUserPassword': RegisterUserPassword,
                     'RegisterPolicy': RegisterPolicy}
-    write_log(Text=RegisterDict, Header=REGISTER_HEADER)
-    # Return whether login was successful or not & redirect succesfully to dashboard in 3 secs.
-    # Loading Circle ++ TODO
-    return 'Hi You are now Registered!!'
+    print(RegisterDict)
+    return render_template('register_success.html')
+    # return 'Hi You are now Registered!!'
     # return render_template('success.html')
 
 
 if __name__ == "__main__":
-
     app.run(debug=True)
