@@ -127,7 +127,7 @@ def send_email_attach(MailDetails):
         server.login(EmailAdd,Pass)
         server.sendmail(EmailAdd, MailDetails["To"], msg.as_string()) 
 
-
+UserDetails = read_user_details()
 
 if __name__ == "__main__":
     """
@@ -186,7 +186,7 @@ if __name__ == "__main__":
     """
     Attached Fancy Email - Python File Attached
     """
-    
+    UserDetails = read_user_details()
     TemplateName = "MLXTREME_Template_Stripo.html"
     TemplateFolder = "Templates"
     UserDetails = read_user_details()
