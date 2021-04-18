@@ -103,7 +103,7 @@ input{
 </head>
 
 <body style="background: linear-gradient(0deg, rgba(34,193,195,1) 26%, rgba(45,98,253,1) 86%);">
-   <div class="w3-sidebar w3-bar-block w3-border-right style="display:none" id="mySidebar"; )>
+<div class="w3-sidebar w3-bar-block w3-border-right style="display:none" id="mySidebar"; )>
   <button onclick="w3_close()" class="w3-bar-item w3-large"> &times;</button>
   <a href="MaternalHealthDy.html" class="w3-bar-item w3-button">Maternal-Health</a>
   <a href="ChestXraydy.html" class="w3-bar-item w3-button">ChestXray-TB</a>
@@ -114,6 +114,8 @@ input{
   
   
 </div>
+  
+
 
 <!-- Page Content -->
 <div class="w3-white">
@@ -134,35 +136,12 @@ input{
 
         </div>
 </div>
-    <div id="sample" >
-      <form action="/maternalhealthresult" method = 'post' enctype="multipart/form-data">
+    
+      <form action="" style="display: flex;justify-content: center;background: linear-gradient(0deg, rgba(34,193,195,1) 26%, rgba(45,98,253,1) 86%);;" >
         
-        <div class="item">
-          <p>First-Name<span class="required">*</span></p>
-          <div class="name-item">
-            <input type="text" name="fname" placeholder="First" required/>
-            
-          </div>
-          <div class="item">
-          <p>Last-Name<span class="required">*</span></p>
-          <div class="name-item">
-            <input type="text" name="lname" placeholder="Last" required/>
-            
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="item">
-            <p>Email<span class="required">*</span></p>
-            <input type="text" name="email" required/>
-          </div>
-          
-        </div>
-         <div class="contact-item">
-          <div class="item">
-            <p>Mobile Number<span class="required">*</span></p>
-            <input type="text" name="mobile" required/>
-          </div>
-          
+        <div class="container">
+        <div class="form-title">
+            <h3>Form</h3>
         </div>
         <p>First Name</p>
         <input type="text" class="name"><br>
@@ -177,15 +156,17 @@ input{
         
         
         
-        <input type="file"  name="f" style="width: 49%;" >
-  
-         <div class="btn-block">
-          <button type="submit" href="/">Submit</button>
+        <input type="file" id="myFile" name="filename" style="width: 50%;"><br><br>
+        
         <div class="wrapper">
             <div class="image">
                 <img src="" alt="">
             </div>
         </div><br>
+  
+         <div class="btn-block">
+          <button type="submit" href="/">Submit</button>
+        </div>
         
         
           
