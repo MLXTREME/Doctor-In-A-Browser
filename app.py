@@ -59,14 +59,6 @@ def homepage():
     return render_template('homepage.html')
 
 
-@app.route('/homepage.html')
-def homepage1():
-    return render_template('homepage.html')
-
-
-@app.route('/homepage.html')
-def homepage2():
-    return render_template('homepage.html')
 
 
 @app.route('/login', methods=['POST'])
