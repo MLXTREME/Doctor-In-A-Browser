@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style></style>
+       
+</head>
+
+<body>
+    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+  <button onclick="w3_close()" class="w3-bar-item w3-large"> &times;</button>
+  <a href="MaternalHealthDy.html" class="w3-bar-item w3-button">Maternal-Health</a>
+  <a href="#" class="w3-bar-item w3-button">ChestXray-TB</a>
+  <a href="#" class="w3-bar-item w3-button">Fetal-Health</a>
+  <a href="#" class="w3-bar-item w3-button">HIV</a>
+  <a href="#" class="w3-bar-item w3-button">Parkinson's Health</a>
+  <a href="#" class="w3-bar-item w3-button">Alzheimer's Child Health</a>
+  
+  
+</div>
+
+<!-- Page Content -->
+<div class="w3-teal">
+  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+   <div class="nav_icons" style="display: flex;justify-content: space-evenly; ">
+            <div>
+                <a href="homepage.html" class="w3-bar-item w3-button">Home</a>
+            </div>
+            <div>
+                <a href="#" class="w3-bar-item w3-button">Models</a>
+            </div>
+            <div>
+                <a href="#" class="w3-bar-item w3-button">About us</a>
+            </div>
+            <div>
+                <a href="#" class="w3-bar-item w3-button">Contact us</a>
+            </div>
+
+        </div>
+      
+</div>
+  <h2 style="text-align: center;">Sorry, you haven't conducted any tests 🙁 </h2>
+
+   
+
+    
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+        
+            function w3_open() {
+                document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+}
+    
+    </script>
+
+</body>
+
+</html>
