@@ -28,6 +28,13 @@ import os
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 from chatterbot.trainers import ListTrainer
+import matplotlib.pyplot as plt
+import numpy as np
+from keras.preprocessing import image
+from skimage import io
+import warnings
+from tensorflow import keras
+from werkzeug import *
 
 app = Flask(__name__, static_folder="assets")
 ROOT_DIR = os.getcwd()
@@ -160,6 +167,59 @@ def get_bot_response():
 	userText = request.args.get('msg')
 	return str(bott.get_response(userText))
 
+
+@app.route('/CTdy.html')#,methods=['POST'])
+def maternal():
+    return render_template('/CTdy.html')
+
+CurrDir = os.path.dirname(os.path.abspath(__file__))
+
+ModelPath = os.path.join(CurrDir, "Best_Model88")
+Model = keras.models.load_model(ModelPath)
+
+warnings.filterwarnings("ignore")
+
+def preprocessImg(img):
+    x = image.img_to_array(img)
+    x = np.expand_dims(x, axis=0)
+    x /= 255
+    return x
+
+
+def RunInferences(imgPath, display=True):
+    img = image.load_img(imgPath, grayscale=False, target_size=(64, 64))
+    x = preprocessImg(img)
+    custom = Model.predict(x)
+    if display:
+        displayImg = image.load_img(
+            imgPath, grayscale=False, target_size=(256, 256))
+        plt.imshow(displayImg)
+        plt.xticks([])
+        plt.yticks([])
+        plt.show()
+
+    a = custom[0]
+    ind = np.argmax(a)
+    print("Class Probabilities :", a)
+    print('Prediction:', CLASS_LABELS[ind])
+    return ind
+
+CLASS_LABELS = {0: 'non-COVID', 1: 'COVID'}
+
+@app.route('/CTdyResult',methods=['POST'])
+def maternalresult():
+    uploads_dir = os.path.join(app.instance_path, 'uploads')
+    os.makedirs(uploads_dir)#, exists_ok=True)
+    f = request.form['fname']
+    l = request.form['lname']
+    email = request.form['email']
+    mobile = request.form['mobile']
+    filex = request.files['f']
+    filex.save(os.path.join(uploads_dir, werkzeug.secure_filename(filex.filename)))
+    imgPath = os.path.join(uploads_dir, werkzeug.secure_filename(filex.filename))
+    pred = RunInferences(imgPath, display=False)
+    print(pred)
+    return f+" "+l+" with contacts "+email+" "+mobile+" uploaded "+ filex.filename
 
 if __name__ == "__main__":
     app.run(debug=True)
