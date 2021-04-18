@@ -44,10 +44,10 @@
                 <li class="X-4"><button>Model-4</button></li>
             </ul>
         </div>
-        
+
         <div class="stage">
             <div class="model-1-tab">
-                 <!--Upload-->
+                <!--Upload-->
                 <div class="container">
 
                     <div class="wrapper">
@@ -60,17 +60,11 @@
                         <div class="file-name">
                             File name here
                         </div>
-
                     </div>
-                   
-                      
                     <input id="default-button" type="file" hidden>
                     <button id="choose_file" onclick="defaultBtnActive()">Choose a file</button>
-                    
-                   
-
                 </div>
-                
+
 
             </div>
             <div class="model-2-tab">
@@ -108,15 +102,16 @@
         </div>
     </div>
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
             font-family: 'Montserrat';
         }
+
         /*Nav-Bar*/
-        
-        .nav_bar{
+
+        .nav_bar {
             height: 60px;
             width: 100%;
             background-color: #5B1FA7;
@@ -125,12 +120,14 @@
             flex: 1;
             align-items: center;
         }
-        .nav_bar a{
+
+        .nav_bar a {
             color: white;
             text-decoration: none;
-           
+
         }
-        .dash_menu button{
+
+        .dash_menu button {
             color: white;
             text-decoration: none;
             background: transparent;
@@ -138,22 +135,24 @@
             font-size: 20px;
             margin-top: 0;
         }
-        .nav_icons{
+
+        .nav_icons {
             display: flex;
             width: 100%;
             justify-content: space-around;
             padding-left: 300px;
         }
+
         /*Body*/
-            /*menu*/
-            
-        .content{
+        /*menu*/
+
+        .content {
             height: 490px;
             width: 100%;
             display: flex;
         }
-        
-        .menu{
+
+        .menu {
             background-color: rgb(255, 80, 133);
             height: 100%;
             width: 250px;
@@ -161,11 +160,13 @@
             pointer-events: none;
             transition: all 0.4s ease;
         }
-        .menu.open{
+
+        .menu.open {
             opacity: 1;
             pointer-events: all;
         }
-        .menu button{
+
+        .menu button {
             width: 100%;
             background: transparent;
             border: none;
@@ -174,19 +175,21 @@
             font-size: 22px;
             padding-top: 20px;
             cursor: pointer;
-            
+
         }
-        button:hover{
-            background-color:rgb(161, 21, 63) ;
+
+        button:hover {
+            background-color: rgb(161, 21, 63);
         }
-        .stage{
-          
+
+        .stage {
+
             width: 100%;
             padding-left: 50px;
         }
-        
-             /*stage*/
-        .stage{
+
+        /*stage*/
+        .stage {
             height: 100%;
             width: 100%;
             justify-content: center;
@@ -194,63 +197,74 @@
             flex: 1;
             padding-left: 120px;
             padding-top: 50px;
-            
+
         }
-        .stage div{
+
+        .stage div {
             position: absolute;
             height: 400px;
             width: 800px;
-            
+
         }
-        .stage h3{
+
+        .stage h3 {
             color: white;
             font-size: 35px;
             padding-left: 350px;
             padding-top: 5px;
         }
-        .model-1-tab{
-            background-color:white;
+
+        .model-1-tab {
+            background-color: white;
             opacity: 0;
         }
-        .model-2-tab{
-            background-color:lightgreen;
+
+        .model-2-tab {
+            background-color: lightgreen;
             opacity: 0;
-            
+
         }
-        .model-3-tab{
-            background-color:lightcoral;
-            opacity: 0;
-        }
-        .model-4-tab{
-            background-color:rgb(6, 177, 177);
+
+        .model-3-tab {
+            background-color: lightcoral;
             opacity: 0;
         }
-        .model-1-tab.open{
+
+        .model-4-tab {
+            background-color: rgb(6, 177, 177);
+            opacity: 0;
+        }
+
+        .model-1-tab.open {
             opacity: 1;
             pointer-events: all;
-            
+
         }
-        .model-2-tab.open{
+
+        .model-2-tab.open {
             opacity: 1;
             pointer-events: all;
         }
-        .model-3-tab.open{
+
+        .model-3-tab.open {
             opacity: 1;
             pointer-events: all;
         }
-        .model-4-tab.open{
+
+        .model-4-tab.open {
             opacity: 1;
             pointer-events: all;
         }
-        
+
         /*Model-1-Upload*/
-        
-        .container{
+
+        .container {
             height: 300px;
             width: 430px;
             position: relative;
         }
-        .container .wrapper{
+
+        .container .wrapper {
             position: relative;
             height: 300px;
             width: 100%;
@@ -262,7 +276,8 @@
             justify-content: center;
             overflow: hidden;
         }
-        .wrapper .image{
+
+        .wrapper .image {
             position: absolute;
             height: 100%;
             width: 100%;
@@ -270,47 +285,56 @@
             align-items: center;
             justify-content: center;
         }
-        .wrapper .image img{
+
+        .wrapper .image img {
             height: 100%;
             width: 100%;
             object-fit: cover;
         }
-        .wrapper .icon{
+
+        .wrapper .icon {
             font-size: 100px;
             color: #9658fe;
         }
-        .wrapper .text{
+
+        .wrapper .text {
             font-size: 20px;
             color: #5B5B7B;
-            font-weight:500;
+            font-weight: 500;
         }
-        .wrapper #cancel{
-            position:absolute;
+
+        .wrapper #cancel {
+            position: absolute;
             top: 0px;
             right: 1px;
             cursor: pointer;
             display: none;
         }
-        .wrapper.active:hover #cancel-btn i{
+
+        .wrapper.active:hover #cancel-btn i {
             display: block;
-          }
-        .wrapper #cancel-btn i:hover{
+        }
+
+        .wrapper #cancel-btn i:hover {
             color: #e74c3c;
         }
-        .wrapper .file-name{
+
+        .wrapper .file-name {
             position: absolute;
             bottom: 0px;
             width: 100%;
-            padding: 8px ;
+            padding: 8px;
             font-size: 18px;
-            color:white;
-            background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);
+            color: white;
+            background: linear-gradient(135deg, #3a8ffe 0%, #9658fe 100%);
             display: none;
         }
-        .wrapper.active:hover .file-name{
+
+        .wrapper.active:hover .file-name {
             display: block;
-          }
-        .container #choose_file{
+        }
+
+        .container #choose_file {
             background: transparent;
             margin-top: 30px;
             display: block;
@@ -319,135 +343,136 @@
             outline: none;
             border-color: #9658fe;
             border-radius: 25px;
-            color:#9658fe;
+            color: #9658fe;
             font-size: 18px;
             font-weight: 500;
             letter-spacing: 1px;
             text-transform: uppercase;
             cursor: pointer;
         }
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
         /*Footer*/
-        
-        .footer{
+
+        .footer {
             height: 60px;
             width: 100%;
             background-color: #5B1FA7;
         }
-        .icons{
+
+        .icons {
             height: 100%;
         }
-        
-        .social{
+
+        .social {
             height: 100%;
             display: flex;
             justify-content: space-around;
             color: white;
             align-items: center;
         }
-        i{
+
+        i {
             color: white;
         }
-        
-        </style>
-        
+    </style>
+
 </body>
 <script>
     /*Menu*/
-const menu = document.querySelector('.menu')
-const dashEm = document.querySelector('.menu_btn')
-const content = document.querySelector('.content')
-const demo = document.querySelector('.demo')
+    const menu = document.querySelector('.menu')
+    const dashEm = document.querySelector('.menu_btn')
+    const content = document.querySelector('.content')
+    const demo = document.querySelector('.demo')
 
 
 
-dashEm.addEventListener('click', () => {
-    console.log('Menu');
-    menu.classList.add('open');
-})
+    dashEm.addEventListener('click', () => {
+        console.log('Menu');
+        menu.classList.add('open');
+    })
 
-menu.addEventListener('click', (e) => {
-    if (e.target.classList.contains('menu')) {
-        menu.classList.remove('open');
+    menu.addEventListener('click', (e) => {
+        if (e.target.classList.contains('menu')) {
+            menu.classList.remove('open');
+        }
+    })
+
+
+    /* Stage*/
+
+    const X1 = document.querySelector('.X-1')
+    const model_1 = document.querySelector('.model-1-tab')
+    X1.addEventListener('click', () => {
+        console.log('X-1');
+        model_1.classList.add('open');
+
+    })
+
+    const X2 = document.querySelector('.X-2')
+    const model_2 = document.querySelector('.model-2-tab')
+    X2.addEventListener('click', () => {
+        console.log('X-2');
+        model_2.classList.add('open');
+
+    })
+
+    const X3 = document.querySelector('.X-3')
+    const model_3 = document.querySelector('.model-3-tab')
+    X3.addEventListener('click', () => {
+        console.log('X-3');
+        model_3.classList.add('open');
+
+    })
+
+    const X4 = document.querySelector('.X-4')
+    const model_4 = document.querySelector('.model-4-tab')
+    X4.addEventListener('click', () => {
+        console.log('X-4');
+        model_4.classList.add('open');
+
+    })
+
+    /*Upload*/
+
+    const choose_file = document.querySelector('#choose_file');
+    const default_button = document.querySelector('#default-button');
+    const img = document.querySelector("img");
+    const wrapper = document.querySelector(".wrapper");
+    const cancel = document.querySelector("#cancel");
+
+
+    function defaultBtnActive() {
+        default_button.click();
     }
-})
+
+    default_button.addEventListener('change', function () {
+        const file = this.files[0];
+
+        if (file) {
+            const reader = new FileReader;
+            reader.addEventListener('load', function () {
+                img.src = reader.result;
+                wrapper.classList.add("active");
+            });
+            cancel.addEventListener("click", function () {
+                img.src = "";
+                wrapper.classList.remove("active");
+            })
+
+            reader.readAsDataURL(file);
+        }
+    })
 
 
-/* Stage*/
-
-const X1 = document.querySelector('.X-1')
-const model_1 = document.querySelector('.model-1-tab')
-X1.addEventListener('click', () => {
-    console.log('X-1');
-    model_1.classList.add('open');
-
-})
-
-const X2 = document.querySelector('.X-2')
-const model_2 = document.querySelector('.model-2-tab')
-X2.addEventListener('click', () => {
-    console.log('X-2');
-    model_2.classList.add('open');
-
-})
-
-const X3 = document.querySelector('.X-3')
-const model_3 = document.querySelector('.model-3-tab')
-X3.addEventListener('click', () => {
-    console.log('X-3');
-    model_3.classList.add('open');
-
-})
-
-const X4 = document.querySelector('.X-4')
-const model_4 = document.querySelector('.model-4-tab')
-X4.addEventListener('click', () => {
-    console.log('X-4');
-    model_4.classList.add('open');
-
-})
-
-/*Upload*/
-
-const choose_file = document.querySelector('#choose_file');
-const default_button = document.querySelector('#default-button');
-const img = document.querySelector("img");
-const wrapper = document.querySelector(".wrapper");
-const cancel = document.querySelector("#cancel");
-
-
-function defaultBtnActive() {
-    default_button.click();
-}
-
-default_button.addEventListener('change', function () {
-    const file = this.files[0];
-
-    if (file) {
-        const reader = new FileReader;
-        reader.addEventListener('load', function () {
-            img.src = reader.result;
-            wrapper.classList.add("active");
-        });
-        cancel.addEventListener("click", function () {
-            img.src = "";
-            wrapper.classList.remove("active");
-        })
-
-        reader.readAsDataURL(file);
-    }
-})
-
-
-const use=document.querySelector('use');
-use.addEventListener('click',()=>{
-    console.log("Laure");
-})
+    const use = document.querySelector('use');
+    use.addEventListener('click', () => {
+        console.log("Laure");
+    })
 </script>
 
 </html>
