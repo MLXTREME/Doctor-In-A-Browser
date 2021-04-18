@@ -172,8 +172,8 @@ if __name__ == "__main__":
     print('Docx File Written To :', OutputFilepath)
     
     MailDetails = {
-                    "Subject": "Your Test Results via ",
-                    "To":      ['njrfarhandasilva10@gmail.com'],
+                    "Subject": "Your Test Results via Doctor-in-a-Browser",
+                    "To":      ['damikdhar@gmail.com','njrfarhandasilva10@gmail.com','nirmalya14misra@gmail.com'],
                     "Body" :   read_file(TempPath),
                     "AttachmentPath" : "out.docx"
                     }
