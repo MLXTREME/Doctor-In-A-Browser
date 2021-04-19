@@ -304,5 +304,19 @@ def fetaldyresult():
         columns[i] = int(request.form[i])
     print(columns)
     return "Check terminal"
+
+'''
+Parkinsons
+'''
+
+@app.route('/parkinsonsdy.html')
+def park():
+    return render_template('parkinsonsdy.html')
+
+@app.route('/parkinsonResult',methods=['POST'])
+def parkres():
+    f = request.files['f']
+    #run stuff on f
+
 if __name__ == "__main__":
     app.run(debug=True)
