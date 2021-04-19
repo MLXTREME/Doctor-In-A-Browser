@@ -68,7 +68,10 @@ PS: not interested because of some time constraints.
  <p align="center">
 <img src="assets/img/flask.png" width="400">
   </p>
- # Usability of our project
+  
+  
+# Usability of our project
+ 
  As said earlier, our project is aimed at improved diagnosis of diseases for the models we have prepared. The least we, as developers, in these testing times can do is help out the health professionals working out their, in the frontline for us day in and day out. With our certificates, when patients visit their doctor, they can skip the diagnosis step and directly move into treating patients, which in case of medical emergencies can save lives. This was for the COVID-19 detection part.
  
  The Maternal Health Chatbot will prove to be very useful for to be mothers, who might have a lot of simple questions about the diet and nutrition plan they should be following. This will also save time as asking and getting replies from a chatbot is easier and time saving than consulting a doctor, who might be busy at the time. 
