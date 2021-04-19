@@ -110,6 +110,8 @@ PS: not interested because of some time constraints.
  <p align="center">
 <img src="https://github.com/MLXTREME/Doctor-In-A-Browser/blob/main/assets/MLXTREME.gif" width="450">
   </p>
+  
+  
 Team Members:
 1. Farhan Hai Khan
 2. Soumyadip Sarkar
