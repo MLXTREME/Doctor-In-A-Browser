@@ -9,7 +9,7 @@ app = Flask(__name__)
 with open('file.txt','r') as file:
     conversation = file.read()
 
-bott = ChatBot("Sunanda's Resume ChatBot")
+bott = ChatBot("Soumyadip's Resume ChatBot")
 trainer2 = ListTrainer(bott)
 trainer2.train([    "Hey",
     "Hi there!",
@@ -41,7 +41,7 @@ trainer.train("chatterbot.corpus.english")
 
 @app.route("/")
 def home():
-	return render_template("home.html")
+	return render_template("chatbot.html")
 
 @app.route("/get")
 def get_bot_response():
