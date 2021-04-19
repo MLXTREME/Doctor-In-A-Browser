@@ -1,4 +1,6 @@
-# Doctor In A Browser
+<p align="center">
+  <h1>Doctor In A Browser</h1>
+</p>
 
 
 <p align="center">
@@ -14,34 +16,31 @@
 </p>
 <br/>
 
-# What is Doctor In A Browser?
+# What is Doctor In A Browser?🤔
 Doctor In A Browser, as the name suggests, is like a doctor in a browser, basically in the form of a Web Application. What does this doctor do, I hear you asked? It is a diagonistic tool. As we know, diagnosis is the first step in any treatment. So, quick and accurate diagnosis can be life saving. 
 
 So, how does it diagnose diseases? Well, it harnesses the power of Machine Learning. Machine Learning, as we know, can be used to learn complex features from data, which can be game changing in the field of disease diagnosis. 
 
 It also produces a report, with a certificate. This report and certificate are mailed to the user for further usability and treatment. 
  
-# USP of our project:
+# USP of our project🌈:
  1. **Machine Learning** based Disease detection for **COVID-19,HIV,Alzheimers,Parkinson**.
  2. **Chatbot* based on diet and recommended physical activities for a pregnant person.
  3. we provide an **analytics page**, **which shows why the predicted results are in that way**.Analysis mail will be consist of Grad-cam and LIME results with different kind of charts.
  4. **Auto mail** after prediction is done with as govt. certified cirtificate based on the disease detection result.
  5. **Personalized Dashboard** for showing previously prediction results. 
  
- # User Interface:
+ # User Interface⚡:
 <pre>
 
-<img src=" https://i.ibb.co/LgHp39d/chrome-BPPm89-Vu-Bf.png" width="500"> <img src=" https://i.ibb.co/HpZgZjd/chrome-Ds-Cv-Wj-NQRt.png" width="500">  <img src=" https://i.ibb.co/1mPZVH2/chrome-m0f0-AGhne-V.png" width="500">  <img src="https://i.ibb.co/n0yds2T/chrome-q-Qfxrcj-OGK.png" width="500"> <img src="https://i.ibb.co/h2fZSkN/chrome-r7-MWMCZ1l-B.png" width="500"> <img src="https://i.ibb.co/xzmh7Wt/chrome-Rbq-Ns-NZqcj.png" width="500"> <img src=" https://i.ibb.co/KGV1sJZ/chrome-UEw-Bvwge-PR.png" width="500">  <img src="https://i.ibb.co/KqPdR77/chrome-wxvkn-Ts-IQS.png" width="500"> <img src=" https://i.ibb.co/8D0X0D2/chrome-yf-Dg-ORD4-X6.png" width="500"> <img src="https://i.ibb.co/T1CvYQY/WINWORD-e4xq-RFjzx-H.png" width="500">
+<img src="https://i.imgur.com/YJVLlDd.png" width="700"> <img src="https://i.imgur.com/OvyI1eQ.png" width="700">  <img src="https://i.imgur.com/I3HZRb6.png" width="700">  <img src="https://i.imgur.com/TgdR7fx.png" width="700"> <img src="https://i.imgur.com/pJJoKWr.png" width="700"> <img src="https://i.imgur.com/b3aBShI.png" width="700"> <img src="https://i.imgur.com/sz6NSVq.png" width="700">  <img src="https://i.imgur.com/ed8pouA.png" width="700"> <img src="https://i.imgur.com/zjTa9lx.png" width="700"> <img src="https://i.imgur.com/ZA7sZHk.png" width="700">
  
  </pre>
 
  
  
- 
 
-
-
-# Machine Learning Models Supported in Doctor In A Browser
+# Machine Learning Models Supported in Doctor In A Browser👨‍💻
 1. **Maternal Health Chatbot** : Pregnancy is an uncertain time for the mothers carrying the foetus. A lot of questions arise in the minds of the to be mothers, especially for the first baby, which they are maybe afraid or too shy of judgement to ask others. Here is where the Maternal Health chatbot comes in. **It is a Frequently Asked Questions based Chatbot on subjects such as the diet to be consumed and the physical activity to go through during the phase of Pregnancy**. It will help to be mothers clear their doubts and a smoother 9 months of carrying the baby.
 
 2. **COVID-19 Detection From CT Scan** : We have been in a pandemic situation for more than a year now. Even today we don't have a system of detecting whether a certain person is infected by COVID-19 with near perfect accuracy. We have an average error of about 0% to 30% , which can be catastrophic, especially for the false negative cases. So, we have made a **COVID-19 detection model which uses the Computer Tomography Scan of the lungs to detect the presence of the deadly virus**. **Our model gives a testing accuracy of 88% , which is better than the existing methods. **
@@ -71,7 +70,7 @@ PS: not interested because of some time constraints.
 **Alzheimer's is the sixth leading cause of death in the United States**. On average, a person with Alzheimer's lives four to eight years after diagnosis, but can live as long as 20 years, depending on other factors. Alzheimer's has no current cure, but treatments for symptoms are available and research continues.**Our model detects 5 stages of Alzheimer's Disease.These stages are,  EMCI,LMCI, MCI, AD, CN.**
 
 
-# Technology Stack
+# Technology Stack⚛
  We used quite a lot of languages and frameworks in this project. 
 
  Firstly we will have a look at the FrontEnd part of the Web Application. We used HTML, CSS and JavaScript for this part of the project, to design the look and feel of the web application.
@@ -93,7 +92,7 @@ PS: not interested because of some time constraints.
   </p>
   
   
-# Usability of our project
+# Usability of our project✅
  
  As said earlier, our project is aimed at improved diagnosis of diseases for the models we have prepared. The least we, as developers, in these testing times can do is help out the health professionals working out their, in the frontline for us day in and day out. With our certificates, when patients visit their doctor, they can skip the diagnosis step and directly move into treating patients, which in case of medical emergencies can save lives. This was for the COVID-19 detection part.
  
@@ -101,7 +100,7 @@ PS: not interested because of some time constraints.
  
 
 
- # Regards from the team
+ # Regards from the team🚀
  Here is hoping you liked our project.
  
  Regards,
