@@ -112,20 +112,6 @@ def registersuccess():
     # return 'Hi You are now Registered!!'
     # return render_template('success.html')
 
-'''@app.route('/MaternalHealthDyabc.html')#,methods=['POST'])
-def maternal():
-    return render_template('/MaternalHealthDy.html')
-
-@app.route('/maternalhealthresult',methods=['POST'])
-def maternalresult():
-    f = request.form['fname']
-    l = request.form['lname']
-    email = request.form['email']
-    mobile = request.form['mobile']
-    filex = request.files['f']
-
-    return f+" "+l+" with contacts "+email+" "+mobile+" uploaded "+ filex.filename
-'''
 
 with open('file.txt','r') as file:
     conversation = file.read()
@@ -220,6 +206,22 @@ def maternalresult():
     pred = RunInferences(imgPath, display=False)
     print(pred)
     return f+" "+l+" with contacts "+email+" "+mobile+" uploaded "+ filex.filename
+
+@app.route('/HIV.html')
+def hiv():
+    return render_template('HIV.html')
+
+@app.route('/maternalhealth.html')
+def mh():
+    return render_template('maternalhealth.html')
+
+@app.route('/ChestxrayTB.html')
+def chest():
+    return render_template('ChestxrayTB.html')
+
+@app.route('/whymedicai.html')
+def why():
+    return render_template('whymedicai.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
