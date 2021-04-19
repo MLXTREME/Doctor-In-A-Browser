@@ -12,7 +12,7 @@ spacy
 chatterbot
 chatterbot-corpus
 
-
+pandas
 numpy
 keras
 tensorflow
