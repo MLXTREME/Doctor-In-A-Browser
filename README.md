@@ -29,6 +29,8 @@ It also produces a report, with a certificate. This report and certificate are m
  3. we provide an **analytics page**, **which shows why the predicted results are in that way**.Analysis mail will be consist of Grad-cam and LIME results with different kind of charts.
  4. **Auto mail** after prediction is done with as govt. certified cirtificate based on the disease detection result.
  5. **Personalized Dashboard** for showing previously prediction results. 
+ 6. Providing **doctor’s appointment booking online.**
+
  
  # User Interface⚡:
 <pre>
@@ -88,7 +90,7 @@ PS: not interested because of some time constraints.
  
 
  <p align="center">
-<img src="assets/img/flask.png" width="400">
+<img src="assets/img/flask.png" width="400"> <img src="https://www.margo-group.com/wp-content/uploads/2018/05/dialogflow1.jpg" width="470">
   </p>
   
   
@@ -108,5 +110,14 @@ PS: not interested because of some time constraints.
  <p align="center">
 <img src="https://github.com/MLXTREME/Doctor-In-A-Browser/blob/main/assets/MLXTREME.gif" width="450">
   </p>
- Team MLXTREME
+  
+  
+Team Members:
+1. Farhan Hai Khan
+2. Soumyadip Sarkar
+3. Nirmalya Misra
+4. Damik Dhar
+5. Spandan Giri
+6. Madhu Charan
+
  
