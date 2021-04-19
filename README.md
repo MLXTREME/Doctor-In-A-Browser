@@ -1,8 +1,10 @@
 # Doctor In A Browser
   <img src="https://forthebadge.com/images/badges/built-with-love.svg">     <img src="https://forthebadge.com/images/badges/made-with-python.svg">    <img src="https://forthebadge.com/images/badges/open-source.svg">
 
+<p align="center">
+  <img width="300" height="250" src="https://github.com/MLXTREME/Doctor-In-A-Browser/blob/main/assets/Smart-Doc-IN-A-Browser.gif">
+</p>
 
-![text](https://github.com/MLXTREME/Doctor-In-A-Browser/blob/main/assets/Smart-Doc-IN-A-Browser.gif?style=centreme)
 
 # What is Doctor In A Browser?
 Doctor In A Browser, as the name suggests, is like a doctor in a browser, basically in the form of a Web Application. What does this doctor do, I hear you asked? It is a diagonistic tool. As we know, diagnosis is the first step in any treatment. So, quick and accurate diagnosis can be life saving. 
