@@ -21,6 +21,12 @@ So, how does it diagnose diseases? Well, it harnesses the power of Machine Learn
 
 It also produces a report, with a certificate. This report and certificate are mailed to the user for further usability and treatment. 
  
+# USP of our project:
+ 1. **Machine Learning** based Disease detection for **COVID-19,HIV,Alzheimers,Parkinson**.
+ 2. **Chatbot* based on diet and recommended physical activities for a pregnant person.
+ 3. we provide an **analytics page**, **which shows why the predicted results are in that way**.Analysis mail will be consist of Grad-cam and LIME results with different kind of charts.
+ 4. **Auto mail** after prediction is done with as govt. certified cirtificate based on the disease detection result.
+ 5. **Personalized Dashboard** for showing previously prediction results. 
  
 
 # Machine Learning Models Supported in Doctor In A Browser
