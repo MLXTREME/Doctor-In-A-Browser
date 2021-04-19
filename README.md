@@ -1,4 +1,8 @@
 # Doctor In A Browser
+<a href="LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/soumya997/Smart-Exam-Form?style=for-the-badge"></a>
+  <img src="https://forthebadge.com/images/badges/built-with-love.svg">     <img src="https://forthebadge.com/images/badges/made-with-python.svg">    <img src="https://forthebadge.com/images/badges/open-source.svg">
+
+
 ![text](https://github.com/MLXTREME/Doctor-In-A-Browser/blob/main/assets/Smart-Doc-IN-A-Browser.gif?style=centreme)
 
 # What is Doctor In A Browser?
