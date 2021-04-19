@@ -1,0 +1,5 @@
+Flask
+spacy
+chatterbot
+chatterbot-corpus
+numpy

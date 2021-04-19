@@ -7,3 +7,14 @@ pypng==0.0.20 # Save QRCode to PNG
 gunicorn==20.0.4 # Deployment to Heroku
 
 cryptography # ==3.3.1 # For Storing Passwords
+
+spacy
+chatterbot
+chatterbot-corpus
+
+
+numpy
+keras
+tensorflow
+scikit-image
+matplotlib==3.2 # for me this works

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+      form{
+          padding: 80px;
+      }
+      .container{
+    height: 570px;
+    width: 450px;
+    background-color:rgb(228, 228, 228);
+    pointer-events: all;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.form-title{
+    height: 60px;
+    width: 100%;
+    background-color:#9658fe;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 10px 10px 0 0;
+}
+p{  
+     font-weight: 500px;
+     margin-top: 10px;
+     margin-bottom: 0;
+     margin-left:40px ;
+}
+.container input{
+    width: 80%;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.container .wrapper{
+    position: relative;
+    height: 90px;
+    width: 80%;
+    margin-top: 5px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px dashed #c2cdda;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 0;
+    margin-left:40px ;
+}
+input{
+    margin-left: 40px;
+    border-radius: 10px;
+    border-color:white ;
+    border-style: none;
+}
+.btn-block {
+      margin-top: 10px;
+      text-align: center;
+      }
+      button {
+      width: auto;
+      padding: 10px;
+      border: none;
+      border-radius: 5px; 
+      background: #1c87c9;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background: #1e6fa0;
+      }
+      #w3.teal{
+          background-color: ;
+      }
+
+</style>
+       
+</head>
+
+<body style="background: linear-gradient(0deg, rgba(34,193,195,1) 26%, rgba(45,98,253,1) 86%);">
+<div class="w3-sidebar w3-bar-block w3-border-right style="display:none" id="mySidebar"; )>
+  <button onclick="w3_close()" class="w3-bar-item w3-large"> &times;</button>
+  <a href="MaternalHealthDy.html" class="w3-bar-item w3-button">Maternal-Health</a>
+  <a href="ChestXraydy.html" class="w3-bar-item w3-button">ChestXray-TB</a>
+  <a href="Fetaldy.html" class="w3-bar-item w3-button">Fetal-Health</a>
+  <a href="HIVdy.html" class="w3-bar-item w3-button">HIV</a>
+  <a href="Parkinson'sdy.html" class="w3-bar-item w3-button">Parkinson's Health</a>
+  <a href="Alzheimerdy.html" class="w3-bar-item w3-button">Alzheimer's Child Health</a>
+  <a href="CTdy.html" class="w3-bar-item w3-button">CT Covid</a>
+  
+  
+</div>
+  
+
+
+<!-- Page Content -->
+<div class="w3-white">
+  <button class="w3-button w3-white w3-xlarge" onclick="w3_open()">☰</button>
+   <div class="nav_icons" style="display: flex;justify-content: space-evenly; ">
+            <div>
+                <a href="homepage.html" class="w3-bar-item w3-button">Home</a>
+            </div>
+            <div>
+                <a href="#" class="w3-bar-item w3-button">Models</a>
+            </div>
+            <div>
+                <a href="#" class="w3-bar-item w3-button">About us</a>
+            </div>
+            <div>
+                <a href="#" class="w3-bar-item w3-button">Contact us</a>
+            </div>
+
+        </div>
+</div>
+    
+      <form action="/maternalhealthresult" method="post" enctype="multipart/form-data"en style="display: flex;justify-content: center;background: linear-gradient(0deg, rgba(34,193,195,1) 26%, rgba(45,98,253,1) 86%);;" >
+        
+        <div class="container">
+        <div class="form-title">
+            <h3>Form</h3>
+        </div>
+        <p>First Name</p>
+        <input type="text" name = 'fname' class="name"><br>
+        <p>Last Name</p>
+        <input type="text" name = 'lname' class="name"><br>
+       
+        <p>Contact</p>
+        <input type="text" name = 'mobile' class="contact"><br>
+        <p>Email</p>
+        <input type="text" name = 'email' class="mail">
+
+        
+        
+        
+        <input type="file"  name="f" style="width: 50%;"><br><br>
+        
+        <div class="wrapper">
+            <div class="image">
+                <img src="" alt="">
+            </div>
+        </div><br>
+  
+         <div class="btn-block">
+          <button type="submit" href="/">Submit</button>
+        </div>
+        
+        
+          
+        
+    
+    </form>
+        
+
+
+   
+
+    
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+        
+            function w3_open() {
+                document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+}
+    
+    </script>
+
+</body>
+
+</html>
