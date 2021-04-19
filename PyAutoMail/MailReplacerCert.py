@@ -174,7 +174,7 @@ if __name__ == "__main__":
     
     MailDetails = {
                     "Subject": "Your Test Results via Doctor-in-a-Browser",
-                    "To":      ['damikdhar@gmail.com','njrfarhandasilva10@gmail.com','nirmalya14misra@gmail.com'],
+                    "To":      ['damikdhar@gmail.com','njrfarhandasilva10@gmail.com','nirmalya14misra@gmail.com','soumya997.sarkar@gmail.com'],
                     "Body" :   read_file(TempPath),
                     "AttachmentPath" : "out.docx"
                     }
