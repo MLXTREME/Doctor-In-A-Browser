@@ -23,7 +23,7 @@ Favicon
 
 # import Flask Library
 
-from flask import Flask, render_template, request, url_for, send_from_directory, jsonify
+from flask import Flask, render_template, request, url_for, send_from_directory, jsonify,render_template_string,Markup
 import os
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
@@ -34,7 +34,9 @@ from keras.preprocessing import image
 from skimage import io
 import warnings
 from tensorflow import keras
-from werkzeug import *
+
+LoginDict = dict()
+RegisterDict = dict()
 
 app = Flask(__name__, static_folder="assets")
 ROOT_DIR = os.getcwd()
@@ -118,7 +120,7 @@ with open('file.txt','r') as file:
 
 bott = ChatBot("Sunanda's Resume ChatBot")
 trainer2 = ListTrainer(bott)
-trainer2.train([    "Hey",
+Training_List = [    "Hey",
         "Hi there!",
         "Hi",
         "Hi!",
@@ -141,9 +143,14 @@ trainer2.train([    "Hey",
         "No, do not take more than the recommended amount of your prenatal vitamin per day. Some multivitamin ingredients, such as vitamin A, can cause birth defects at higher doses.",
         "Why is iron important during pregnancy?",
         "Iron is used by your body to make the extra blood that you and your fetus need during pregnancy. Women who are not pregnant need 18 mg of iron per day. Pregnant women need more, 27 mg per day. This increased amount is found in most prenatal vitamins.",
-        ])
+        ]
+
+
+
+trainer2.train(Training_List)
 trainer = ChatterBotCorpusTrainer(bott)
 trainer.train("chatterbot.corpus.english")
+
 @app.route('/MaternalHealthDy.html')
 def getchatbot():
     return render_template("home.html")
@@ -188,24 +195,65 @@ def RunInferences(imgPath, display=True):
     ind = np.argmax(a)
     print("Class Probabilities :", a)
     print('Prediction:', CLASS_LABELS[ind])
-    return ind
+    pred = CLASS_LABELS[ind]
+    proba = { CLASS_LABELS[0] : a[0],
+             
+            CLASS_LABELS[1] : a[1]
+            }
+    return proba,pred
 
 CLASS_LABELS = {0: 'non-COVID', 1: 'COVID'}
 
+CurrDir = os.path.dirname(os.path.abspath(__file__))
+
+
+
+
+def dict_to_html_table(in_dict):
+    tbl_fmt = '''
+    <table class="rwd-table"> {}
+    </table>'''
+
+    row_fmt = '''
+    <tr>
+        <td>{}</td>
+        <td>{}</td>
+    </tr>'''
+    return tbl_fmt.format(''.join(row_fmt.format(k, v) for k, v in in_dict.items()))
+
+def read_file(fpath):
+    with open(fpath) as f:
+        return f.read()
+
 @app.route('/CTdyResult',methods=['POST'])
 def maternalresult():
-    uploads_dir = os.path.join(app.instance_path, 'uploads')
-    os.makedirs(uploads_dir)#, exists_ok=True)
+    uploads_dir = os.path.join(CurrDir, 'uploads')
+    """
     f = request.form['fname']
     l = request.form['lname']
     email = request.form['email']
     mobile = request.form['mobile']
+    """
     filex = request.files['f']
-    filex.save(os.path.join(uploads_dir, werkzeug.secure_filename(filex.filename)))
-    imgPath = os.path.join(uploads_dir, werkzeug.secure_filename(filex.filename))
-    pred = RunInferences(imgPath, display=False)
+    imgPath = os.path.join(uploads_dir,filex.filename)
+    print(imgPath)
+    filex.save(imgPath)
+    
+    proba,pred = RunInferences(imgPath, display=False)
     print(pred)
-    return f+" "+l+" with contacts "+email+" "+mobile+" uploaded "+ filex.filename
+    Results_Dict = dict()
+    Results_Dict["Predicted Class"]= pred
+    Results_Dict["Class Probabilities"] = "Following Results"
+    for each in proba:
+        Results_Dict[each] = proba[each]
+    # return Results_Dict
+    Prediction_Results = Markup(dict_to_html_table(Results_Dict))
+    return render_template("form_submit.html",Prediction_Results=Prediction_Results)
+    filepath = os.path.join(CurrDir,"templates","form_submit.html")
+    html_file = read_file(filepath)
+    # return render_template_string({% extends 'form_submit.html' %},Prediction_Results=Prediction_Results)
+    # return render_template("form_submit.html",Prediction_Results=Prediction_Results)
+    # return f+" "+l+" with contacts "+email+" "+mobile+" uploaded "+ filex.filename
 
 @app.route('/HIV.html')
 def hiv():
