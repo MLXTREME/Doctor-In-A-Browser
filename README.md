@@ -48,7 +48,7 @@ The success of fetal life determines not only the health of the newborn, but als
 
 
  <p align="center">
-<img src="assets/img/htmlcssjs.png" width="500">
+<img src="assets/img/htmlcssjs.png" width="300">
  </p>
  Now comes the Machine Learning models. We used the popular Python based framework Keras, which is built on top of the framework Tensorflow. 
 
@@ -59,7 +59,7 @@ The success of fetal life determines not only the health of the newborn, but als
  
 
  <p align="center">
-<img src="assets/img/flask.png" width="450">
+<img src="assets/img/flask.png" width="400">
   </p>
  # Usability of our project
  As said earlier, our project is aimed at improved diagnosis of diseases for the models we have prepared. The least we, as developers, in these testing times can do is help out the health professionals working out their, in the frontline for us day in and day out. With our certificates, when patients visit their doctor, they can skip the diagnosis step and directly move into treating patients, which in case of medical emergencies can save lives. This was for the COVID-19 detection part.
