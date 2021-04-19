@@ -31,7 +31,7 @@ It also produces a report, with a certificate. This report and certificate are m
  # User Interface:
 <pre>
 
-<img src=" https://i.ibb.co/LgHp39d/chrome-BPPm89-Vu-Bf.png" width="500"> <img src=" https://i.ibb.co/HpZgZjd/chrome-Ds-Cv-Wj-NQRt.png" width="500">  <img src=" https://i.ibb.co/1mPZVH2/chrome-m0f0-AGhne-V.png" width="500">  <img src="https://i.ibb.co/n0yds2T/chrome-q-Qfxrcj-OGK.png" width="500"> <img src="https://i.ibb.co/h2fZSkN/chrome-r7-MWMCZ1l-B.png" width="500"> <img src="https://i.ibb.co/xzmh7Wt/chrome-Rbq-Ns-NZqcj.png" width="500"> <img src=" https://i.ibb.co/KGV1sJZ/chrome-UEw-Bvwge-PR.png" width="500">  <img src="https://i.ibb.co/KqPdR77/chrome-wxvkn-Ts-IQS.png" width="500"> <img src=" https://i.ibb.co/8D0X0D2/chrome-yf-Dg-ORD4-X6.png" width="500"> <img src="https://i.ibb.co/T1CvYQY/WINWORD-e4xq-RFjzx-H.png" width="500">
+<img src=" https://i.ibb.co/LgHp39d/chrome-BPPm89-Vu-Bf.png" width="700"> <img src=" https://i.ibb.co/HpZgZjd/chrome-Ds-Cv-Wj-NQRt.png" width="700">  <img src=" https://i.ibb.co/1mPZVH2/chrome-m0f0-AGhne-V.png" width="700">  <img src="https://i.ibb.co/n0yds2T/chrome-q-Qfxrcj-OGK.png" width="700"> <img src="https://i.ibb.co/h2fZSkN/chrome-r7-MWMCZ1l-B.png" width="700"> <img src="https://i.ibb.co/xzmh7Wt/chrome-Rbq-Ns-NZqcj.png" width="700"> <img src=" https://i.ibb.co/KGV1sJZ/chrome-UEw-Bvwge-PR.png" width="700">  <img src="https://i.ibb.co/KqPdR77/chrome-wxvkn-Ts-IQS.png" width="700"> <img src=" https://i.ibb.co/8D0X0D2/chrome-yf-Dg-ORD4-X6.png" width="700"> <img src="https://i.ibb.co/T1CvYQY/WINWORD-e4xq-RFjzx-H.png" width="700">
  
  </pre>
 

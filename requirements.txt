@@ -18,3 +18,4 @@ keras
 tensorflow
 scikit-image
 matplotlib==3.2 # for me this works
+scikit-image
