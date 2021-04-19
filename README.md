@@ -33,9 +33,13 @@ The HIV epidemic not only affects the health of individuals, it also impacts hou
     2. Reverse Transcriptase nucleotide sequence (if available)
     3. viral load at the beginning of therapy (log-10 units)
     4. CD4 count at the beginning of therapy
+ 
+ PS: not interested because of some time constraints.
 
 4. **Fetal Health Classification**:
 The success of fetal life determines not only the health of the newborn, but also has a major impact on adult health and disease risk. Good perinatal health is therefore important to individuals, to society and to future generations. **Now to classify the health of a fetus is Normal, Suspect or Pathological is what our ML model does with ~95% accurecy**.Classify fetal health in order to prevent child and maternal mortality.
+
+PS: not interested because of some time constraints.
 
 5. Alzheimers Disease Classification: 
 **Alzheimer's is the sixth leading cause of death in the United States**. On average, a person with Alzheimer's lives four to eight years after diagnosis, but can live as long as 20 years, depending on other factors. Alzheimer's has no current cure, but treatments for symptoms are available and research continues.**Our model detects 5 stages of Alzheimer's Disease.These stages are,  EMCI,LMCI, MCI, AD, CN.**
