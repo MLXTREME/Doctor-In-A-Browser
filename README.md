@@ -10,7 +10,7 @@
 <p align="center">
 
  <img src="https://forthebadge.com/images/badges/built-with-love.svg">  <img src="https://forthebadge.com/images/badges/made-with-python.svg">  <img src="https://forthebadge.com/images/badges/made-with-javascript.svg">  <img src="https://forthebadge.com/images/badges/open-source.svg">
-
+<a href="CONTRIBUTING.md"><img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen?style=for-the-badge&labelColor=black&logo=github"></a>
 </p>
 <br/>
 
@@ -59,7 +59,7 @@ The success of fetal life determines not only the health of the newborn, but als
  
 
  <p align="center">
-<img src="assets/img/flask.png" width="700">
+<img src="assets/img/flask.png" width="500">
   </p>
  # Usability of our project
  As said earlier, our project is aimed at improved diagnosis of diseases for the models we have prepared. The least we, as developers, in these testing times can do is help out the health professionals working out their, in the frontline for us day in and day out. With our certificates, when patients visit their doctor, they can skip the diagnosis step and directly move into treating patients, which in case of medical emergencies can save lives. This was for the COVID-19 detection part.
@@ -72,7 +72,7 @@ The success of fetal life determines not only the health of the newborn, but als
  Regards,
  
  <p align="center">
-<img src="https://github.com/MLXTREME/Doctor-In-A-Browser/blob/main/assets/MLXTREME.gif" width="700">
+<img src="https://github.com/MLXTREME/Doctor-In-A-Browser/blob/main/assets/MLXTREME.gif" width="500">
   </p>
  Team MLXTREME
  
