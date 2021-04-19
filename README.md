@@ -31,15 +31,12 @@ It also produces a report, with a certificate. This report and certificate are m
  # User Interface:
 <pre>
 
-<img src=" https://i.ibb.co/LgHp39d/chrome-BPPm89-Vu-Bf.png" width="500"> <img src=" https://i.ibb.co/HpZgZjd/chrome-Ds-Cv-Wj-NQRt.png" width="500">  <img src=" https://i.ibb.co/1mPZVH2/chrome-m0f0-AGhne-V.png" width="500">  <img src="https://i.ibb.co/n0yds2T/chrome-q-Qfxrcj-OGK.png" width="500"> <img src="https://i.ibb.co/h2fZSkN/chrome-r7-MWMCZ1l-B.png" width="500"> <img src="https://i.ibb.co/xzmh7Wt/chrome-Rbq-Ns-NZqcj.png" width="500"> <img src=" https://i.ibb.co/KGV1sJZ/chrome-UEw-Bvwge-PR.png" width="500">  <img src="https://i.ibb.co/KqPdR77/chrome-wxvkn-Ts-IQS.png" width="500"> <img src=" https://i.ibb.co/8D0X0D2/chrome-yf-Dg-ORD4-X6.png" width="500"> <img src="https://i.ibb.co/T1CvYQY/WINWORD-e4xq-RFjzx-H.png" width="500">
+<img src="https://i.imgur.com/YJVLlDd.png" width="700"> <img src="https://i.imgur.com/OvyI1eQ.png" width="700">  <img src="https://i.imgur.com/I3HZRb6.png" width="700">  <img src="https://i.imgur.com/TgdR7fx.png" width="700"> <img src="https://i.imgur.com/pJJoKWr.png" width="700"> <img src="https://i.imgur.com/b3aBShI.png" width="700"> <img src="https://i.imgur.com/sz6NSVq.png" width="700">  <img src="https://i.imgur.com/ed8pouA.png" width="700"> <img src="https://i.imgur.com/zjTa9lx.png" width="700"> <img src="https://i.imgur.com/ZA7sZHk.png" width="700">
  
  </pre>
 
  
  
- 
-
-
 
 # Machine Learning Models Supported in Doctor In A Browser
 1. **Maternal Health Chatbot** : Pregnancy is an uncertain time for the mothers carrying the foetus. A lot of questions arise in the minds of the to be mothers, especially for the first baby, which they are maybe afraid or too shy of judgement to ask others. Here is where the Maternal Health chatbot comes in. **It is a Frequently Asked Questions based Chatbot on subjects such as the diet to be consumed and the physical activity to go through during the phase of Pregnancy**. It will help to be mothers clear their doubts and a smoother 9 months of carrying the baby.
