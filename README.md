@@ -28,13 +28,16 @@ It also produces a report, with a certificate. This report and certificate are m
 
 3. **Predict HIV Progression(HIV model)**:
 The HIV epidemic not only affects the health of individuals, it also impacts households, communities, and the development and economic growth of nations. Many of the countries hardest hit by HIV also suffer from other infectious diseases, food insecurity, and other serious problems. Here is where the ML model comes in. This model predicts the likelihood that an HIV patient's infection.It takes ,
+
+1.Protease nucleotide sequence 
+
+2. Reverse Transcriptase nucleotide sequence (if available)
+
+4. viral load at the beginning of therapy (log-10 units)
+
+5. CD4 count at the beginning of therapy
  
-    1.Protease nucleotide sequence 
-    2. Reverse Transcriptase nucleotide sequence (if available)
-    3. viral load at the beginning of therapy (log-10 units)
-    4. CD4 count at the beginning of therapy
- 
- PS: not interested because of some time constraints.
+PS: not interested because of some time constraints.
 
 4. **Fetal Health Classification**:
 The success of fetal life determines not only the health of the newborn, but also has a major impact on adult health and disease risk. Good perinatal health is therefore important to individuals, to society and to future generations. **Now to classify the health of a fetus is Normal, Suspect or Pathological is what our ML model does with ~95% accurecy**.Classify fetal health in order to prevent child and maternal mortality.
