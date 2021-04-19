@@ -293,5 +293,16 @@ def chest():
 def why():
     return render_template('whymedicai.html')
 
+@app.route('/Fetaldy.html')
+def fetaldy():
+    return render_template('Fetaldy.html')
+
+@app.route('/fetaldyresult',methods=['POST'])
+def fetaldyresult():
+    columns = {'bv':0 ,'a':0, 'fm':0, 'uc':0, 'ld':0, 'sd':0,'pd':0,'astv':0,'mvstv':0,'ptwaltv':0,'mvltv':0,'hw':0,'hmin':0,'hmax':0,'hpeak':0,'hzero':0,'hmode':0,'hmean':0,'hmedian':0,'hvariance':0,'ht':0}
+    for i in columns.keys():
+        columns[i] = int(request.files[i])
+    print(columns)
+    return "Check terminal"
 if __name__ == "__main__":
     app.run(debug=True)

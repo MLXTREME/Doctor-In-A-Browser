@@ -23,7 +23,7 @@
           padding: 80px;
       }
       .container{
-    height: 570px;
+    height: 1300px;
     width: 450px;
     background-color:rgb(228, 228, 228);
     pointer-events: all;
@@ -135,32 +135,59 @@ input{
         </div>
 </div>
     
-      <form action="" style="display: flex;justify-content: center;background: linear-gradient(0deg, rgba(34,193,195,1) 26%, rgba(45,98,253,1) 86%);;" >
+      <form action="/feataldyresult" method = "post" style="display: flex;justify-content: center;background: linear-gradient(0deg, rgba(34,193,195,1) 26%, rgba(45,98,253,1) 86%);;" >
         
         <div class="container">
         <div class="form-title">
             <h3>Form</h3>
         </div>
-        <p>First Name</p>
-        <input type="text" class="name"><br>
-        <p>Last Name</p>
-        <input type="text" class="name"><br>
-       
-        <p>Contact</p>
-        <input type="text" class="contact"><br>
-        <p>Email</p>
-        <input type="text" class="mail">
+        <p>Baseline value</p>
+        <input type="text" name = 'bv' ><br>
+        <p>Accelerations</p>
+        <input type="text" name = 'a' ><br>
+        
+        <p>Fetal Movement</p>
+        <input type="text" name = 'fm' ><br>
+        <p>Uterine Contractions</p>
+        <input type="text" name = 'uc'><br>
 
+        <p>Light Decelerations</p>
+        <input type="text" name = 'ld' ><br>
+        <p>Severe Decelerations</p>
+        <input type="text"  name = 'sd'><br>
+        <p>Prolongued Decelerations</p>
+        <input type="text"  name = 'pd'><br>
+        <p>Abnormal Short Term Variability</p>
+        <input type="text" name = 'astv' ><br>
+        <p>Mean value of short term Variability</p>
+        <input type="text" name = 'mvstv'><br>
+
+        <p>Percentage of time with abnormal Long term variability</p>
+        <input type="text" name = 'ptwaltv'><br>
+        <p>Mean value of long term variability</p>
+        <input type="text" name = 'mvltv'><br>
+        <p>Histogram Width</p>
+        <input type="text" name = 'hw'><br>
         
+        <p>Histogram min</p>
+        <input type="text" name = 'hmin'><br>
+        <p>Histogram max</p>
+        <input type="text" name = 'hmax'><br>
+        <p>Histogram number of peaks</p>
+        <input type="text" name = 'hpeak'><br>
+        <p>Histogram number of zeros</p>
+        <input type="text" name = 'hzero'><br>
+        <p>Histogram mode</p>
+        <input type="text" name = 'hmode'><br>
+        <p>Histogram mean</p>
+        <input type="text" name = 'hmean' ><br>
+        <p>Histogram median</p>
+        <input type="text" name = 'hmedian' ><br>
+        <p>Histogram variance</p>
+        <input type="text" name = 'hvariance' ><br>
+        <p>Histogram tendency</p>
+        <input type="text" name = 'ht'><br>
         
-        
-        <input type="file" id="myFile" name="filename" style="width: 50%;"><br><br>
-        
-        <div class="wrapper">
-            <div class="image">
-                <img src="" alt="">
-            </div>
-        </div><br>
   
          <div class="btn-block">
           <button type="submit" href="/">Submit</button>
