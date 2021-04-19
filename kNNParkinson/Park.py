@@ -3,7 +3,7 @@ cd kNNParkinson
 python Park.py
 """
 
-CLASS_LABELS_Park = {0 : "healthy", 1: "parkinson"}
+
 
 from sklearn.preprocessing import StandardScaler
 import cv2
@@ -15,7 +15,7 @@ import pickle
 from sklearn.neighbors import KNeighborsClassifier
 import warnings
 from sklearn import metrics
-
+CLASS_LABELS_Park = {0 : "healthy", 1: "parkinson"}
 def ScaleData(data):
   scaler = StandardScaler()
   # transform data
@@ -62,7 +62,7 @@ def RunParkinsonInferences(imgPath):
   img = dispimgs(imgPath)
   imgres = ScaleData(img.reshape(1,-1))
   pred = model.predict(imgres)
-  return CLASS_LABELS_Park[pred[0]]
+  return pred[0],CLASS_LABELS_Park[pred[0]]
 
 kNNModelPath = "kNNModel.p"
 model = pickle.load( open( kNNModelPath , "rb" ) )

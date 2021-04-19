@@ -10,7 +10,8 @@ from sklearn.ensemble import RandomForestClassifier
 import numpy as np
 from numpy import genfromtxt
 import pandas as pd
-
+import os
+ModelDir = os.path.dirname(os.path.abspath(__file__))
 
 def predict_rf(a):
     """
@@ -43,6 +44,7 @@ def FetalInferences(FetalDetails):
     
 
 if __name__=="__main__":
+    """
     my_data = pd.read_csv("fetal_health.csv")
 
     iloc = np.array(my_data.iloc[2,:])
@@ -50,5 +52,8 @@ if __name__=="__main__":
 
     predict_rf1 = predict_rf(a)
     print(predict_rf1)
+    """
+    columns = {'bv':0 ,'a':0, 'fm':0, 'uc':0, 'ld':0, 'sd':0,'pd':0,'astv':0,'mvstv':0,'ptwaltv':0,'mvltv':0,'hw':0,'hmin':0,'hmax':0,'hpeak':0,'hzero':0,'hmode':0,'hmean':0,'hmedian':0,'hvariance':0,'ht':0}
+    print(FetalInferences(columns))
 
 

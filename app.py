@@ -21,6 +21,14 @@ TODO :
 Favicon
 """
 
+import warnings
+warnings.filterwarnings('ignore')
+import pickle
+from sklearn.ensemble import RandomForestClassifier
+import numpy as np
+from numpy import genfromtxt
+import pandas as pd
+
 # import Flask Library
 
 from flask import Flask, render_template, request, url_for, send_from_directory, jsonify,render_template_string,Markup
@@ -37,11 +45,100 @@ from tensorflow import keras
 from subprocess import call
 
 
+from sklearn.preprocessing import StandardScaler
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+import os
+import pickle
+
+from sklearn.neighbors import KNeighborsClassifier
+import warnings
+from sklearn import metrics
+CLASS_LABELS_Park = {0 : "healthy", 1: "parkinson"}
+def ScaleData(data):
+  scaler = StandardScaler()
+  # transform data
+  scaled = scaler.fit_transform(data)
+  return scaled
+
+SIZE= 128
+def rgba2rgb( rgba, background=(255,255,255) ):
+    row, col, ch = rgba.shape
+
+    if ch == 3:
+        return rgba
+
+    assert ch == 4, 'RGBA image has 4 channels.'
+
+    rgb = np.zeros( (row, col, 3), dtype='float32' )
+    r, g, b, a = rgba[:,:,0], rgba[:,:,1], rgba[:,:,2], rgba[:,:,3]
+
+    a = np.asarray( a, dtype='float32' ) / 255.0
+
+    R, G, B = background
+
+    rgb[:,:,0] = r * a + (1.0 - a) * R
+    rgb[:,:,1] = g * a + (1.0 - a) * G
+    rgb[:,:,2] = b * a + (1.0 - a) * B
+
+    return np.asarray( rgb, dtype='uint8' )
+
+
+def rgb2gray(rgb):
+    return np.dot(rgb[...,:3], [0.2989, 0.5870, 0.1140])
+
+
+def dispimgs(path,disp=0):
+    # reading png image file
+    im = plt.imread(path)
+    if im.shape[-1]==4:
+        im = rgba2rgb(im)
+    im = cv2.resize(im,(SIZE,SIZE))
+    im = rgb2gray(im)
+    return im
+
+def RunParkinsonInferences(imgPath):
+  img = dispimgs(imgPath)
+  imgres = ScaleData(img.reshape(1,-1))
+  pred = model.predict(imgres)
+  return pred[0],CLASS_LABELS_Park[pred[0]]
+
+
+def predict_rf(a):
+    """
+    shape of a = (21,1)
+    """
+    filename = 'rf_model.pkl'
+    # try:
+    loaded_model = pickle.load(open(filename, 'rb'))
+    predict = loaded_model.predict(a)
+    print(predict)
+    print("prediction done :)")
+    return predict
+
+def FetalInferences(FetalDetails):
+    """
+    baseline value,accelerations,fetal_movement,uterine_contractions,light_decelerations,severe_decelerations,
+    prolongued_decelerations,abnormal_short_term_variability,mean_value_of_short_term_variability,
+    percentage_of_time_with_abnormal_long_term_variability,mean_value_of_long_term_variability,
+    histogram_width,histogram_min,histogram_max,histogram_number_of_peaks,histogram_number_of_zeroes,
+    histogram_mode,histogram_mean,histogram_median,histogram_variance,histogram_tendency,fetal_health
+    """
+    DetailsArr = np.array(list(FetalDetails.values()))
+    a= np.reshape(DetailsArr, (-1,DetailsArr.shape[0]))
+
+    predict_rf1 = predict_rf(a)
+    preds = predict_rf1[0]
+    print(preds)
+    return preds
+    
 LoginDict = dict()
 RegisterDict = dict()
 
 app = Flask(__name__, static_folder="assets")
 ROOT_DIR = os.getcwd()
+CurrDir = os.path.dirname(os.path.abspath(__file__))
 
 @app.route('/')
 def home1():
@@ -299,11 +396,23 @@ def fetaldy():
 
 @app.route('/fetaldyresult',methods=['POST'])
 def fetaldyresult():
-    columns = {'bv':0 ,'a':0, 'fm':0, 'uc':0, 'ld':0, 'sd':0,'pd':0,'astv':0,'mvstv':0,'ptwaltv':0,'mvltv':0,'hw':0,'hmin':0,'hmax':0,'hpeak':0,'hzero':0,'hmode':0,'hmean':0,'hmedian':0,'hvariance':0,'ht':0}
+    columns = {'bv':0 ,'a':0, 'fm':0, 'uc':0, 'ld':0, 'sd':0,'pd':0,'astv':0,'mvstv':0,'ptwaltv':0,'mvltv':0,
+               'hw':0,'hmin':0,'hmax':0,'hpeak':0,'hzero':0,'hmode':0,'hmean':0,'hmedian':0,'hvariance':0,'ht':0}
     for i in columns.keys():
-        columns[i] = int(request.form[i])
+        columns[i] =float(request.form[i])
     print(columns)
-    return "Check terminal"
+    x = FetalInferences(columns)
+    Results_Dict = dict()
+    Results_Dict["Predicted Value"]= x
+    FetalCLASSLABELS = {
+                        1:"Normal",
+                        2:"Suspect",
+                        3:"Pathological"
+                        }
+    Results_Dict["Predicted Class"] = FetalCLASSLABELS[x]
+    Prediction_Results = Markup(dict_to_html_table(Results_Dict))
+    return render_template("form_submit.html",Prediction_Results=Prediction_Results)
+    return "Check Terminal"
 
 '''
 Parkinsons
@@ -312,11 +421,27 @@ Parkinsons
 @app.route('/parkinsonsdy.html')
 def park():
     return render_template('parkinsonsdy.html')
-
+kNNModelPath = "kNNModel.p"
+model = pickle.load( open( kNNModelPath , "rb" ) )
 @app.route('/parkinsonResult',methods=['POST'])
 def parkres():
-    f = request.files['f']
-    #run stuff on f
+    uploads_dir = os.path.join(CurrDir, 'uploads')
+    filex = request.files['f']
+    imgPath = os.path.join(uploads_dir,filex.filename)
+    print(imgPath)
+    filex.save(imgPath)
+    
+    CLASS_LABELS_Park = {0 : "healthy", 1: "parkinson"}
+    
+    print(RunParkinsonInferences(imgPath))
+    pred, clsname= RunParkinsonInferences(imgPath)
+    print(pred)
+    Results_Dict = dict()
+    Results_Dict["Predicted Class Value"]= pred
+    Results_Dict["Predicted Class Label"]= clsname
+    Prediction_Results = Markup(dict_to_html_table(Results_Dict))
+    return render_template("form_submit.html",Prediction_Results=Prediction_Results)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
