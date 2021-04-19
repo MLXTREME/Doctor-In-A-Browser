@@ -2,15 +2,15 @@
 
 
 <p align="center">
-  <img width="300" height="250" src="https://github.com/MLXTREME/Doctor-In-A-Browser/blob/main/assets/Smart-Doc-IN-A-Browser.gif">
+  <img width="400" height="400" src="https://github.com/MLXTREME/Doctor-In-A-Browser/blob/main/assets/Smart-Doc-IN-A-Browser.gif">
 </p>
-<a href="CONTRIBUTING.md"><img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen?style=for-the-badge&labelColor=black&logo=github"></a>
 <br/>
-<a href="LICENSE"><img alt="GitHub License Apache-2.0" src="https://img.shields.io/github/license/vysakh-m/Virtual-Doc?style=for-the-badge&labelColor=black&logo=github"></a>
 <p align="center">
 
  <img src="https://forthebadge.com/images/badges/built-with-love.svg">  <img src="https://forthebadge.com/images/badges/made-with-python.svg">  <img src="https://forthebadge.com/images/badges/made-with-javascript.svg">  <img src="https://forthebadge.com/images/badges/open-source.svg">
 <a href="CONTRIBUTING.md"><img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen?style=for-the-badge&labelColor=black&logo=github"></a>
+<a href="LICENSE"><img alt="GitHub License Apache-2.0" src="https://img.shields.io/github/license/vysakh-m/Virtual-Doc?style=for-the-badge&labelColor=black&logo=github"></a>
+
 </p>
 <br/>
 
@@ -53,13 +53,13 @@ The success of fetal life determines not only the health of the newborn, but als
  Now comes the Machine Learning models. We used the popular Python based framework Keras, which is built on top of the framework Tensorflow. 
 
 <p align="center">
-<img src="assets/img/tfk.png" width="700">
+<img src="assets/img/tfk.png" width="500">
   </p>
  For the BackEnd, which basically integrates all the different FrontEnd files and the files containing the Machine Learning models, to get the predictions out of the models, we have used the Python based microframework Flask.
  
 
  <p align="center">
-<img src="assets/img/flask.png" width="500">
+<img src="assets/img/flask.png" width="450">
   </p>
  # Usability of our project
  As said earlier, our project is aimed at improved diagnosis of diseases for the models we have prepared. The least we, as developers, in these testing times can do is help out the health professionals working out their, in the frontline for us day in and day out. With our certificates, when patients visit their doctor, they can skip the diagnosis step and directly move into treating patients, which in case of medical emergencies can save lives. This was for the COVID-19 detection part.
@@ -72,7 +72,7 @@ The success of fetal life determines not only the health of the newborn, but als
  Regards,
  
  <p align="center">
-<img src="https://github.com/MLXTREME/Doctor-In-A-Browser/blob/main/assets/MLXTREME.gif" width="500">
+<img src="https://github.com/MLXTREME/Doctor-In-A-Browser/blob/main/assets/MLXTREME.gif" width="450">
   </p>
  Team MLXTREME
  
