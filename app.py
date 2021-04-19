@@ -34,6 +34,8 @@ from keras.preprocessing import image
 from skimage import io
 import warnings
 from tensorflow import keras
+from subprocess import call
+
 
 LoginDict = dict()
 RegisterDict = dict()
@@ -206,6 +208,14 @@ CLASS_LABELS = {0: 'non-COVID', 1: 'COVID'}
 
 CurrDir = os.path.dirname(os.path.abspath(__file__))
 
+import os, fnmatch
+def find(pattern, path):
+    result = []
+    for root, dirs, files in os.walk(path):
+        for name in files:
+            if fnmatch.fnmatch(name, pattern):
+                result.append(os.path.join(root, name))
+    return result
 
 
 
@@ -248,12 +258,24 @@ def maternalresult():
         Results_Dict[each] = proba[each]
     # return Results_Dict
     Prediction_Results = Markup(dict_to_html_table(Results_Dict))
+    send_the_email = True
+    if send_the_email==True:
+        mail_dir = os.path.join(CurrDir,"PyAutoMail")
+        os.chdir(mail_dir)
+        mail_file=os.path.join(CurrDir,"PyAutoMail","MailReplacerCert.py")
+        call(["python", mail_file])
     return render_template("form_submit.html",Prediction_Results=Prediction_Results)
     filepath = os.path.join(CurrDir,"templates","form_submit.html")
     html_file = read_file(filepath)
     # return render_template_string({% extends 'form_submit.html' %},Prediction_Results=Prediction_Results)
     # return render_template("form_submit.html",Prediction_Results=Prediction_Results)
     # return f+" "+l+" with contacts "+email+" "+mobile+" uploaded "+ filex.filename
+
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'assets', 'favicons'),
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 @app.route('/HIV.html')
 def hiv():

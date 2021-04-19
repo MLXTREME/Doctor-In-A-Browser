@@ -11,6 +11,7 @@ MainDir = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR =MainDir
 
 
+
 import fnmatch
 import os
 import zipfile
@@ -126,21 +127,21 @@ if __name__ == "__main__":
     string_res = """Covid Test Predictions :<br>Test Results : Negative<br>Desription : XYZ<br>Comments : ABC<br><br></p></td>"""
     TestDetails = {
                     "Title" : "Covid Test Predictions",
-                    "Test Results" : "Negative",
-                    "Desription" : "Level 1 - Advised Usage of Medical Treatment with Proper Consultation with a Doctor",
-                    "Comments" : "Immediate Vaccination May Help in Recovery."
+                    "Test Results" : "Positive",
+                    "Desription" : "Level 4 - Advised Usage of Medical Treatment with Proper Consultation with a Doctor",
+                    "Comments" : "Immediate Vaccination Needed."
                     }
     
     rewriteHTMLTemplate(TestDetails,fpath=TempPath)
     ReplacementDictionary = {'Your_Amazing_Name': 'Farhan Hai Khan',
                             'YOUR_AWESOME_NAME_HERE': 'FARHAN HAI KHAN',
-                            'COVID': 'Coronavirus Scale : 11.67 %',
-                            'Automated': 'Automated Tests : Passed Successfully',
-                            'Manual': 'Manual Tests : Passed with Considerations',
-                            'Description': 'Comments : Fit for Travel',
+                            'COVID': 'Coronavirus Scale : 91.53 %',
+                            'Automated': 'Automated Tests : Failed',
+                            'Manual': 'Manual Tests : Failed, Found COVID Positive',
+                            'Description': 'Comments : Unfit for Travel',
                             'UID_Aadhaar': 'UID (Aadhaar) : 7458-2541-7364',
                             'Cert': 'Certificate ID : 9546-8741-9463',
-                            'Generated': 'Generated : 22.06.2020 5:30GMT',
+                            'Generated': 'Generated : 19.04.2020 3:30GMT',
                             'Signature': 'Damik Dhar',
                             'Esteemed': 'DAMIK DHAR',
                             'Designation': 'Captain, Team MLXTREME',
@@ -178,6 +179,7 @@ if __name__ == "__main__":
                     "AttachmentPath" : "out.docx"
                     }
     send_email_attach(MailDetails)
+    print('Mail Sent!')
     # os.remove(TempPath)
     
     
