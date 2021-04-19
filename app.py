@@ -301,7 +301,7 @@ def fetaldy():
 def fetaldyresult():
     columns = {'bv':0 ,'a':0, 'fm':0, 'uc':0, 'ld':0, 'sd':0,'pd':0,'astv':0,'mvstv':0,'ptwaltv':0,'mvltv':0,'hw':0,'hmin':0,'hmax':0,'hpeak':0,'hzero':0,'hmode':0,'hmean':0,'hmedian':0,'hvariance':0,'ht':0}
     for i in columns.keys():
-        columns[i] = int(request.files[i])
+        columns[i] = int(request.form[i])
     print(columns)
     return "Check terminal"
 if __name__ == "__main__":
