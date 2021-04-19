@@ -14,3 +14,18 @@ It also produces a report, with a certificate. This report and certificate are m
 2. **COVID-19 Detection From CT Scan** : We have been in a pandemic situation for more than a year now. Even today we don't have a system of detecting whether a certain person is infected by COVID-19 with near perfect accuracy. We have an average error of about 0% to 30% , which can be catastrophic, especially for the false negative cases. So, we have made a COVID-19 detection model which uses the Computer Tomography Scan of the lungs to detect the presence of the deadly virus. Our model gives a testing accuracy of 88% , which is better than the existing methods. 
 
 
+# Technology Stack
+ We used quite a lot of languages and frameworks in this project. 
+
+ Firstly we will have a look at the FrontEnd part of the Web Application. We used HTML, CSS and JavaScript for this part of the project, to design the look and feel of the web application.
+
+ ![](assets/img/htmlcssjs.png)
+ 
+ Now comes the Machine Learning models. We used the popular Python based framework Keras, which is built on top of the framework Tensorflow. 
+
+ ![](assets/img/tfk.png)
+
+ For the BackEnd, which basically integrates all the different FrontEnd files and the files containing the Machine Learning models, to get the predictions out of the models, we have used the Python based microframework Flask.
+
+ ![](assets/img/flask.png)
+ 
