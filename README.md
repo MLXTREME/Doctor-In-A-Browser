@@ -20,6 +20,8 @@ Doctor In A Browser, as the name suggests, is like a doctor in a browser, basica
 So, how does it diagnose diseases? Well, it harnesses the power of Machine Learning. Machine Learning, as we know, can be used to learn complex features from data, which can be game changing in the field of disease diagnosis. 
 
 It also produces a report, with a certificate. This report and certificate are mailed to the user for further usability and treatment. 
+ 
+ 
 
 # Machine Learning Models Supported in Doctor In A Browser
 1. **Maternal Health Chatbot** : Pregnancy is an uncertain time for the mothers carrying the foetus. A lot of questions arise in the minds of the to be mothers, especially for the first baby, which they are maybe afraid or too shy of judgement to ask others. Here is where the Maternal Health chatbot comes in. **It is a Frequently Asked Questions based Chatbot on subjects such as the diet to be consumed and the physical activity to go through during the phase of Pregnancy**. It will help to be mothers clear their doubts and a smoother 9 months of carrying the baby.
@@ -42,9 +44,12 @@ PS: not interested because of some time constraints.
 4. **Fetal Health Classification**:
 The success of fetal life determines not only the health of the newborn, but also has a major impact on adult health and disease risk. Good perinatal health is therefore important to individuals, to society and to future generations. **Now to classify the health of a fetus is Normal, Suspect or Pathological is what our ML model does with ~95% accurecy**.Classify fetal health in order to prevent child and maternal mortality.
 
+5. **Parkinson Disease Detection:**
+Parkinson’s disease is the second most common age-related neurodegenerative disorder after Alzheimer’s disease. An estimated seven to 10 million people worldwide have Parkinson’s disease. To solve this problem we have created a ML model which can detect the Parkinson Disease. It is too easy to detect by our app, go to the Parkinson Disease section upload a image with drawing spirals and waves by the patient, and hit predict. it will show, you have that disease or not and on top of it it will give an analytics that why the predicted result is that way. 
+
 PS: not interested because of some time constraints.
 
-5. Alzheimers Disease Classification: 
+5. **Alzheimers Disease Classification: **
 **Alzheimer's is the sixth leading cause of death in the United States**. On average, a person with Alzheimer's lives four to eight years after diagnosis, but can live as long as 20 years, depending on other factors. Alzheimer's has no current cure, but treatments for symptoms are available and research continues.**Our model detects 5 stages of Alzheimer's Disease.These stages are,  EMCI,LMCI, MCI, AD, CN.**
 
 
@@ -71,12 +76,13 @@ PS: not interested because of some time constraints.
   
   
 # Usability of our project
-
  
  As said earlier, our project is aimed at improved diagnosis of diseases for the models we have prepared. The least we, as developers, in these testing times can do is help out the health professionals working out their, in the frontline for us day in and day out. With our certificates, when patients visit their doctor, they can skip the diagnosis step and directly move into treating patients, which in case of medical emergencies can save lives. This was for the COVID-19 detection part.
  
- The Maternal Health Chatbot will prove to be very useful for to be mothers, who might have a lot of simple questions about the diet and nutrition plan they should be following. This will also save time as asking and getting replies from a chatbot is easier and time saving than consulting a doctor, who might be busy at the time. The Fetal health classifier will classify wheter a fetus is normal,suspect or pathological. This can help in saving feuts from death inside the womb. 
+ The Maternal Health Chatbot will prove to be very useful for to be mothers, who might have a lot of simple questions about the diet and nutrition plan they should be following. This will also save time as asking and getting replies from a chatbot is easier and time saving than consulting a doctor, who might be busy at the time. 
  
+
+
  # Regards from the team
  Here is hoping you liked our project.
  
