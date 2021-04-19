@@ -90,7 +90,7 @@ PS: not interested because of some time constraints.
  
 
  <p align="center">
-<img src="assets/img/flask.png" width="400">
+<img src="assets/img/flask.png" width="400"> <img src="https://www.margo-group.com/wp-content/uploads/2018/05/dialogflow1.jpg" width="470">
   </p>
   
   
