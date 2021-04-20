@@ -109,7 +109,8 @@ def predict_rf(a):
     """
     shape of a = (21,1)
     """
-    filename = 'rf_model.pkl'
+    filename = os.path.join(CurrDir,'rf_model.pkl')
+    print(filename)
     # try:
     loaded_model = pickle.load(open(filename, 'rb'))
     predict = loaded_model.predict(a)
@@ -244,12 +245,12 @@ Training_List = [    "Hey",
         "Iron is used by your body to make the extra blood that you and your fetus need during pregnancy. Women who are not pregnant need 18 mg of iron per day. Pregnant women need more, 27 mg per day. This increased amount is found in most prenatal vitamins.",
         ]
 
-
+"""
 
 trainer2.train(Training_List)
 trainer = ChatterBotCorpusTrainer(bott)
 trainer.train("chatterbot.corpus.english")
-
+"""
 @app.route('/MaternalHealthDy.html')
 def getchatbot():
     return render_template("home.html")
@@ -265,10 +266,10 @@ def maternal():
     return render_template('/CTdy.html')
 
 CurrDir = os.path.dirname(os.path.abspath(__file__))
-
+"""
 ModelPath = os.path.join(CurrDir, "Best_Model88")
 Model = keras.models.load_model(ModelPath)
-
+"""
 warnings.filterwarnings("ignore")
 
 def preprocessImg(img):
