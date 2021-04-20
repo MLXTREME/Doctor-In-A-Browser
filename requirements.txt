@@ -20,3 +20,9 @@ scikit-image
 matplotlib==3.2 # for me this works
 scikit-image
 opencv-python
+
+
+lxml
+urllib3
+beautifulsoup4
+requests
